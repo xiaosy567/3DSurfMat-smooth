@@ -1,0 +1,780 @@
+//
+// time: Fri Jan 13 14:26:34 2012
+//
+// version: 3.2.0 (format), 4.4.4 (DX)
+//
+//
+// MODULE main
+// workspace: width = 651, height = 633
+// layout: snap = 0, width = 50, height = 50, align = NN
+//
+macro main(
+) -> (
+) {
+    // 
+    // node Import[1]: x = 40, y = 54, inputs = 6, label = Import
+    // input[1]: defaulting = 0, visible = 1, type = 32, value = "vreco.general"
+    // input[2]: defaulting = 0, visible = 1, type = 32, value = "field0"
+    // input[3]: defaulting = 0, visible = 1, type = 32, value = NULL
+    //
+main_Import_1_out_1 = 
+    Import(
+    main_Import_1_in_1,
+    main_Import_1_in_2,
+    main_Import_1_in_3,
+    main_Import_1_in_4,
+    main_Import_1_in_5,
+    main_Import_1_in_6
+    ) [instance: 1, cache: 1];
+    // 
+    // node Compute[1]: x = 59, y = 170, inputs = 3, label = Compute
+    // input[1]: defaulting = 0, visible = 0, type = 32, value = "$0*1;"
+    // expression: value = a*1;
+    // name[2]: value = a
+    // name[3]: value = b
+    //
+main_Compute_1_out_1 = 
+    Compute(
+    main_Compute_1_in_1,
+    main_Import_1_out_1,
+    main_Compute_1_in_3
+    ) [instance: 1, cache: 1];
+    // 
+    // node RubberSheet[1]: x = 84, y = 299, inputs = 4, label = RubberSheet
+    // input[2]: defaulting = 0, visible = 1, type = 5, value = 10.0
+    //
+main_RubberSheet_1_out_1 = 
+    RubberSheet(
+    main_Compute_1_out_1,
+    main_RubberSheet_1_in_2,
+    main_RubberSheet_1_in_3,
+    main_RubberSheet_1_in_4
+    ) [instance: 1, cache: 1];
+    // 
+    // node AutoColor[1]: x = 74, y = 379, inputs = 10, label = AutoColor
+    //
+main_AutoColor_1_out_1,
+main_AutoColor_1_out_2 = 
+    AutoColor(
+    main_RubberSheet_1_out_1,
+    main_AutoColor_1_in_2,
+    main_AutoColor_1_in_3,
+    main_AutoColor_1_in_4,
+    main_AutoColor_1_in_5,
+    main_AutoColor_1_in_6,
+    main_AutoColor_1_in_7,
+    main_AutoColor_1_in_8,
+    main_AutoColor_1_in_9,
+    main_AutoColor_1_in_10
+    ) [instance: 1, cache: 1];
+    // 
+    // node Caption[1]: x = 256, y = 170, inputs = 9, label = Caption
+    // input[1]: defaulting = 0, visible = 1, type = 32, value = "Metadynamics Reconstruction"
+    // input[7]: defaulting = 0, visible = 0, type = 32, value = "roman_d"
+    //
+main_Caption_1_out_1 = 
+    Caption(
+    main_Caption_1_in_1,
+    main_Caption_1_in_2,
+    main_Caption_1_in_3,
+    main_Caption_1_in_4,
+    main_Caption_1_in_5,
+    main_Caption_1_in_6,
+    main_Caption_1_in_7,
+    main_Caption_1_in_8,
+    main_Caption_1_in_9
+    ) [instance: 1, cache: 1];
+    // 
+    // node ColorBar[1]: x = 376, y = 127, inputs = 16, label = ColorBar
+    // input[2]: defaulting = 0, visible = 1, type = 8, value = [0.2 0.5]
+    // input[3]: defaulting = 0, visible = 1, type = 8, value = [250 20]
+    // input[5]: defaulting = 1, visible = 0, type = 1, value = NULL
+    // input[8]: defaulting = 1, visible = 1, type = 32, value = "5"
+    // input[9]: defaulting = 0, visible = 1, type = 16777248, value = {"black"}
+    // input[11]: defaulting = 0, visible = 0, type = 5, value = 1.0
+    // input[12]: defaulting = 0, visible = 0, type = 32, value = "roman_dser"
+    // input[16]: defaulting = 0, visible = 0, type = 1, value = 10
+    //
+main_ColorBar_1_out_1 = 
+    ColorBar(
+    main_AutoColor_1_out_2,
+    main_ColorBar_1_in_2,
+    main_ColorBar_1_in_3,
+    main_ColorBar_1_in_4,
+    main_ColorBar_1_in_5,
+    main_ColorBar_1_in_6,
+    main_ColorBar_1_in_7,
+    main_ColorBar_1_in_8,
+    main_ColorBar_1_in_9,
+    main_ColorBar_1_in_10,
+    main_ColorBar_1_in_11,
+    main_ColorBar_1_in_12,
+    main_ColorBar_1_in_13,
+    main_ColorBar_1_in_14,
+    main_ColorBar_1_in_15,
+    main_ColorBar_1_in_16
+    ) [instance: 1, cache: 1];
+    // 
+    // node Isosurface[1]: x = 550, y = 250, inputs = 6, label = Isosurface
+    // input[2]: defaulting = 1, visible = 1, type = 5, value = NULL
+    // input[3]: defaulting = 0, visible = 1, type = 1, value = 12
+    // input[4]: defaulting = 1, visible = 0, type = 34816, value = NULL
+    //
+main_Isosurface_1_out_1 = 
+    Isosurface(
+    main_Compute_1_out_1,
+    main_Isosurface_1_in_2,
+    main_Isosurface_1_in_3,
+    main_Isosurface_1_in_4,
+    main_Isosurface_1_in_5,
+    main_Isosurface_1_in_6
+    ) [instance: 1, cache: 1];
+    // 
+    // node RubberSheet[2]: x = 542, y = 344, inputs = 4, label = RubberSheet
+    // input[2]: defaulting = 0, visible = 0, type = 5, value = 1.0
+    //
+main_RubberSheet_2_out_1 = 
+    RubberSheet(
+    main_Isosurface_1_out_1,
+    main_RubberSheet_2_in_2,
+    main_RubberSheet_2_in_3,
+    main_RubberSheet_2_in_4
+    ) [instance: 2, cache: 1];
+    // 
+    // node Color[2]: x = 579, y = 439, inputs = 5, label = Color
+    // input[2]: defaulting = 0, visible = 1, type = 32, value = "black"
+    //
+main_Color_2_out_1 = 
+    Color(
+    main_RubberSheet_2_out_1,
+    main_Color_2_in_2,
+    main_Color_2_in_3,
+    main_Color_2_in_4,
+    main_Color_2_in_5
+    ) [instance: 2, cache: 1];
+    // 
+    // node Collect[1]: x = 291, y = 474, inputs = 5, label = Collect
+    //
+main_Collect_1_out_1 = 
+    Collect(
+    main_AutoColor_1_out_1,
+    main_ColorBar_1_out_1,
+    main_Collect_1_in_3,
+    main_Color_2_out_1,
+    main_Collect_1_in_5
+    ) [instance: 1, cache: 1];
+    // 
+    // node Color[1]: x = 261, y = 307, inputs = 5, label = Color
+    // input[2]: defaulting = 0, visible = 1, type = 32, value = "black"
+    //
+main_Color_1_out_1 = 
+    Color(
+    main_Caption_1_out_1,
+    main_Color_1_in_2,
+    main_Color_1_in_3,
+    main_Color_1_in_4,
+    main_Color_1_in_5
+    ) [instance: 1, cache: 1];
+    // 
+    // node Colormap[1]: x = 368, y = 25, inputs = 19, label = Colormap
+    // input[1]: defaulting = 0, visible = 0, type = 16777224, value = { [0.0 0.71578947] [1.0 0.0] }
+    // input[2]: defaulting = 0, visible = 0, type = 16777224, value = { [0.0031446541 1.0] [1.0 1.0] }
+    // input[3]: defaulting = 0, visible = 0, type = 16777224, value = { [0.0 1.0] }
+    // input[4]: defaulting = 0, visible = 0, type = 16777224, value = { [0.0 1.0] [1.0 1.0] }
+    // input[5]: defaulting = 0, visible = 0, type = 32, value = "Colormap_1"
+    // input[7]: defaulting = 1, visible = 0, type = 5, value = 1.0
+    // input[8]: defaulting = 1, visible = 0, type = 5, value = 1.3381617
+    // input[9]: defaulting = 1, visible = 0, type = 1, value = 20
+    // input[12]: defaulting = 0, visible = 0, type = 16777221, value = { 1.0 1.3381617 }
+    // input[17]: defaulting = 0, visible = 0, type = 5, value = 1.0
+    // input[18]: defaulting = 0, visible = 0, type = 5, value = 1.3381617
+    // window: position = (0.1938,0.4336), size = 0.5078x0.4395, screen = 0
+    //
+main_Colormap_1_out_1[cache: 2],
+main_Colormap_1_out_2[cache: 2] = 
+    Colormap(
+    main_Colormap_1_in_1,
+    main_Colormap_1_in_2,
+    main_Colormap_1_in_3,
+    main_Colormap_1_in_4,
+    main_Colormap_1_in_5,
+    main_Colormap_1_in_6,
+    main_Colormap_1_in_7,
+    main_Colormap_1_in_8,
+    main_Colormap_1_in_9,
+    main_Colormap_1_in_10,
+    main_Colormap_1_in_11,
+    main_Colormap_1_in_12,
+    main_Colormap_1_in_13,
+    main_Colormap_1_in_14,
+    main_Colormap_1_in_15,
+    main_Colormap_1_in_16,
+    main_Colormap_1_in_17,
+    main_Colormap_1_in_18,
+    main_Colormap_1_in_19
+    ) [instance: 1, cache: 1];
+    // 
+    // node Scale[1]: x = 184, y = 516, inputs = 2, label = Scale
+    // input[2]: defaulting = 0, visible = 1, type = 8, value = [60 60 2 ]
+    //
+main_Scale_1_out_1 = 
+    Scale(
+    main_Collect_1_out_1,
+    main_Scale_1_in_2
+    ) [instance: 1, cache: 1];
+    // 
+    // node Image[1]: x = 259, y = 571, inputs = 49, label = Image
+    // input[1]: defaulting = 0, visible = 0, type = 67108863, value = "Image_1"
+    // input[4]: defaulting = 0, visible = 0, type = 1, value = 1
+    // input[5]: defaulting = 0, visible = 0, type = 8, value = [23.814 23.814 -263.48]
+    // input[6]: defaulting = 0, visible = 0, type = 8, value = [23.814 23.814 1433.45]
+    // input[7]: defaulting = 0, visible = 0, type = 5, value = 909.384
+    // input[8]: defaulting = 0, visible = 0, type = 1, value = 884
+    // input[9]: defaulting = 0, visible = 0, type = 5, value = 0.63
+    // input[10]: defaulting = 0, visible = 0, type = 8, value = [0 1 0]
+    // input[11]: defaulting = 1, visible = 0, type = 5, value = 30.0001
+    // input[12]: defaulting = 0, visible = 0, type = 1, value = 0
+    // input[14]: defaulting = 0, visible = 0, type = 1, value = 1
+    // input[15]: defaulting = 1, visible = 0, type = 32, value = "none"
+    // input[16]: defaulting = 1, visible = 0, type = 32, value = "none"
+    // input[17]: defaulting = 1, visible = 0, type = 1, value = 1
+    // input[18]: defaulting = 1, visible = 0, type = 1, value = 1
+    // input[19]: defaulting = 0, visible = 0, type = 1, value = 0
+    // input[22]: defaulting = 0, visible = 0, type = 32, value = "white"
+    // input[25]: defaulting = 0, visible = 0, type = 32, value = "/home/xsy/work-ustc/nucleic_base_data/GC-proton-transfer/2dmtd/2d/gc-2d-mtd.tiff"
+    // input[26]: defaulting = 0, visible = 0, type = 32, value = "tiff"
+    // input[27]: defaulting = 1, visible = 0, type = 1, value = 600
+    // input[28]: defaulting = 1, visible = 0, type = 5, value = 0.648
+    // input[29]: defaulting = 0, visible = 0, type = 3, value = 1
+    // input[30]: defaulting = 0, visible = 0, type = 16777248, value = {"differ of N3-H1-N1", "differ of O6-H4-N4", ""}
+    // input[31]: defaulting = 0, visible = 0, type = 16777217, value = { 15 15 5 }
+    // input[32]: defaulting = 1, visible = 0, type = 16777224, value = {[0 0 0] [0 0 0]}
+    // input[33]: defaulting = 0, visible = 0, type = 3, value = 0
+    // input[34]: defaulting = 0, visible = 0, type = 3, value = 0
+    // input[36]: defaulting = 0, visible = 0, type = 3, value = 0
+    // input[37]: defaulting = 0, visible = 0, type = 16777248, value = {"clear", "black", "black", "black"}
+    // input[38]: defaulting = 0, visible = 0, type = 16777248, value = {"background", "grid", "ticks", "labels"}
+    // input[39]: defaulting = 0, visible = 0, type = 5, value = 0.7
+    // input[40]: defaulting = 0, visible = 0, type = 32, value = "roman_tser"
+    // input[41]: defaulting = 0, visible = 0, type = 32, value = "none"
+    // input[43]: defaulting = 1, visible = 0, type = 16777221, value = { 1.500000 }
+    // input[44]: defaulting = 1, visible = 0, type = 16777221, value = { 0.0 }
+    // input[46]: defaulting = 1, visible = 0, type = 16777248, value = { "5.5" }
+    // input[47]: defaulting = 1, visible = 0, type = 16777248, value = NULL
+    // depth: value = 24
+    // window: position = (0.0977,0.0557), size = 0.7016x0.5840, screen = 0
+    // internal caching: 1
+    //
+main_Image_1_out_1,
+main_Image_1_out_2,
+main_Image_1_out_3 = 
+    Image(
+    main_Image_1_in_1,
+    main_Scale_1_out_1,
+    main_Image_1_in_3,
+    main_Image_1_in_4,
+    main_Image_1_in_5,
+    main_Image_1_in_6,
+    main_Image_1_in_7,
+    main_Image_1_in_8,
+    main_Image_1_in_9,
+    main_Image_1_in_10,
+    main_Image_1_in_11,
+    main_Image_1_in_12,
+    main_Image_1_in_13,
+    main_Image_1_in_14,
+    main_Image_1_in_15,
+    main_Image_1_in_16,
+    main_Image_1_in_17,
+    main_Image_1_in_18,
+    main_Image_1_in_19,
+    main_Image_1_in_20,
+    main_Image_1_in_21,
+    main_Image_1_in_22,
+    main_Image_1_in_23,
+    main_Image_1_in_24,
+    main_Image_1_in_25,
+    main_Image_1_in_26,
+    main_Image_1_in_27,
+    main_Image_1_in_28,
+    main_Image_1_in_29,
+    main_Image_1_in_30,
+    main_Image_1_in_31,
+    main_Image_1_in_32,
+    main_Image_1_in_33,
+    main_Image_1_in_34,
+    main_Image_1_in_35,
+    main_Image_1_in_36,
+    main_Image_1_in_37,
+    main_Image_1_in_38,
+    main_Image_1_in_39,
+    main_Image_1_in_40,
+    main_Image_1_in_41,
+    main_Image_1_in_42,
+    main_Image_1_in_43,
+    main_Image_1_in_44,
+    main_Image_1_in_45,
+    main_Image_1_in_46,
+    main_Image_1_in_47,
+    main_Image_1_in_48,
+    main_Image_1_in_49
+    ) [instance: 1, cache: 1];
+// network: end of macro body
+CacheScene(main_Image_1_in_1, main_Image_1_out_1, main_Image_1_out_2);
+}
+main_Import_1_in_1 = "vreco.general";
+main_Import_1_in_2 = "field0";
+main_Import_1_in_3 = NULL;
+main_Import_1_in_4 = NULL;
+main_Import_1_in_5 = NULL;
+main_Import_1_in_6 = NULL;
+main_Import_1_out_1 = NULL;
+main_Compute_1_in_1 = "$0*1;";
+main_Compute_1_in_3 = NULL;
+main_Compute_1_out_1 = NULL;
+main_RubberSheet_1_in_2 = 10.0;
+main_RubberSheet_1_in_3 = NULL;
+main_RubberSheet_1_in_4 = NULL;
+main_RubberSheet_1_out_1 = NULL;
+main_AutoColor_1_in_2 = NULL;
+main_AutoColor_1_in_3 = NULL;
+main_AutoColor_1_in_4 = NULL;
+main_AutoColor_1_in_5 = NULL;
+main_AutoColor_1_in_6 = NULL;
+main_AutoColor_1_in_7 = NULL;
+main_AutoColor_1_in_8 = NULL;
+main_AutoColor_1_in_9 = NULL;
+main_AutoColor_1_in_10 = NULL;
+main_AutoColor_1_out_1 = NULL;
+main_AutoColor_1_out_2 = NULL;
+main_Caption_1_in_1 = "Metadynamics Reconstruction";
+main_Caption_1_in_2 = NULL;
+main_Caption_1_in_3 = NULL;
+main_Caption_1_in_4 = NULL;
+main_Caption_1_in_5 = NULL;
+main_Caption_1_in_6 = NULL;
+main_Caption_1_in_7 = "roman_d";
+main_Caption_1_in_8 = NULL;
+main_Caption_1_in_9 = NULL;
+main_Caption_1_out_1 = NULL;
+main_ColorBar_1_in_2 = [0.2 0.5];
+main_ColorBar_1_in_3 = [250 20];
+main_ColorBar_1_in_4 = NULL;
+main_ColorBar_1_in_5 = NULL;
+main_ColorBar_1_in_6 = NULL;
+main_ColorBar_1_in_7 = NULL;
+main_ColorBar_1_in_8 = NULL;
+main_ColorBar_1_in_9 = {"black"};
+main_ColorBar_1_in_10 = NULL;
+main_ColorBar_1_in_11 = 1.0;
+main_ColorBar_1_in_12 = "roman_dser";
+main_ColorBar_1_in_13 = NULL;
+main_ColorBar_1_in_14 = NULL;
+main_ColorBar_1_in_15 = NULL;
+main_ColorBar_1_in_16 = 10;
+main_ColorBar_1_out_1 = NULL;
+main_Isosurface_1_in_2 = NULL;
+main_Isosurface_1_in_3 = 12;
+main_Isosurface_1_in_4 = NULL;
+main_Isosurface_1_in_5 = NULL;
+main_Isosurface_1_in_6 = NULL;
+main_Isosurface_1_out_1 = NULL;
+main_RubberSheet_2_in_2 = 1.0;
+main_RubberSheet_2_in_3 = NULL;
+main_RubberSheet_2_in_4 = NULL;
+main_RubberSheet_2_out_1 = NULL;
+main_Color_2_in_2 = "black";
+main_Color_2_in_3 = NULL;
+main_Color_2_in_4 = NULL;
+main_Color_2_in_5 = NULL;
+main_Color_2_out_1 = NULL;
+main_Collect_1_in_3 = NULL;
+main_Collect_1_in_5 = NULL;
+main_Collect_1_out_1 = NULL;
+main_Color_1_in_2 = "black";
+main_Color_1_in_3 = NULL;
+main_Color_1_in_4 = NULL;
+main_Color_1_in_5 = NULL;
+main_Colormap_1_in_1 = { [0.0 0.71578947] [1.0 0.0] };
+main_Colormap_1_in_2 = { [0.0031446541 1.0] [1.0 1.0] };
+main_Colormap_1_in_3 = { [0.0 1.0] };
+main_Colormap_1_in_4 = { [0.0 1.0] [1.0 1.0] };
+main_Colormap_1_in_5 = "Colormap_1";
+main_Colormap_1_in_6 = NULL;
+main_Colormap_1_in_7 = NULL;
+main_Colormap_1_in_8 = NULL;
+main_Colormap_1_in_9 = NULL;
+main_Colormap_1_in_10 = NULL;
+main_Colormap_1_in_11 = NULL;
+main_Colormap_1_in_12 = { 1.0 1.3381617 };
+main_Colormap_1_in_13 = NULL;
+main_Colormap_1_in_14 = NULL;
+main_Colormap_1_in_15 = NULL;
+main_Colormap_1_in_16 = NULL;
+main_Colormap_1_in_17 = 1.0;
+main_Colormap_1_in_18 = 1.3381617;
+main_Colormap_1_in_19 = NULL;
+main_Scale_1_in_2 = [60 60 2 ];
+main_Scale_1_out_1 = NULL;
+macro Image(
+        id,
+        object,
+        where,
+        useVector,
+        to,
+        from,
+        width,
+        resolution,
+        aspect,
+        up,
+        viewAngle,
+        perspective,
+        options,
+        buttonState = 1,
+        buttonUpApprox = "none",
+        buttonDownApprox = "none",
+        buttonUpDensity = 1,
+        buttonDownDensity = 1,
+        renderMode = 0,
+        defaultCamera,
+        reset,
+        backgroundColor,
+        throttle,
+        RECenable = 0,
+        RECfile,
+        RECformat,
+        RECresolution,
+        RECaspect,
+        AAenable = 0,
+        AAlabels,
+        AAticks,
+        AAcorners,
+        AAframe,
+        AAadjust,
+        AAcursor,
+        AAgrid,
+        AAcolors,
+        AAannotation,
+        AAlabelscale,
+        AAfont,
+        interactionMode,
+        title,
+        AAxTickLocs,
+        AAyTickLocs,
+        AAzTickLocs,
+        AAxTickLabels,
+        AAyTickLabels,
+        AAzTickLabels,
+        webOptions) -> (
+        object,
+        camera,
+        where)
+{
+    ImageMessage(
+        id,
+        backgroundColor,
+        throttle,
+        RECenable,
+        RECfile,
+        RECformat,
+        RECresolution,
+        RECaspect,
+        AAenable,
+        AAlabels,
+        AAticks,
+        AAcorners,
+        AAframe,
+        AAadjust,
+        AAcursor,
+        AAgrid,
+        AAcolors,
+        AAannotation,
+        AAlabelscale,
+        AAfont,
+        AAxTickLocs,
+        AAyTickLocs,
+        AAzTickLocs,
+        AAxTickLabels,
+        AAyTickLabels,
+        AAzTickLabels,
+        interactionMode,
+        title,
+        renderMode,
+        buttonUpApprox,
+        buttonDownApprox,
+        buttonUpDensity,
+        buttonDownDensity) [instance: 1, cache: 1];
+    autoCamera =
+        AutoCamera(
+            object,
+            "front",
+            object,
+            resolution,
+            aspect,
+            [0,1,0],
+            perspective,
+            viewAngle,
+            backgroundColor) [instance: 1, cache: 1];
+    realCamera =
+        Camera(
+            to,
+            from,
+            width,
+            resolution,
+            aspect,
+            up,
+            perspective,
+            viewAngle,
+            backgroundColor) [instance: 1, cache: 1];
+    coloredDefaultCamera = 
+	 UpdateCamera(defaultCamera,
+            background=backgroundColor) [instance: 1, cache: 1];
+    nullDefaultCamera =
+        Inquire(defaultCamera,
+            "is null + 1") [instance: 1, cache: 1];
+    resetCamera =
+        Switch(
+            nullDefaultCamera,
+            coloredDefaultCamera,
+            autoCamera) [instance: 1, cache: 1];
+    resetNull = 
+        Inquire(
+            reset,
+            "is null + 1") [instance: 2, cache: 1];
+    reset =
+        Switch(
+            resetNull,
+            reset,
+            0) [instance: 2, cache: 1];
+    whichCamera =
+        Compute(
+            "($0 != 0 || $1 == 0) ? 1 : 2",
+            reset,
+            useVector) [instance: 1, cache: 1];
+    camera = Switch(
+            whichCamera,
+            resetCamera,
+            realCamera) [instance: 3, cache: 1];
+    AAobject =
+        AutoAxes(
+            object,
+            camera,
+            AAlabels,
+            AAticks,
+            AAcorners,
+            AAframe,
+            AAadjust,
+            AAcursor,
+            AAgrid,
+            AAcolors,
+            AAannotation,
+            AAlabelscale,
+            AAfont,
+            AAxTickLocs,
+            AAyTickLocs,
+            AAzTickLocs,
+            AAxTickLabels,
+            AAyTickLabels,
+            AAzTickLabels) [instance: 1, cache: 1];
+    switchAAenable = Compute("$0+1",
+	     AAenable) [instance: 2, cache: 1];
+    object = Switch(
+	     switchAAenable,
+	     object,
+	     AAobject) [instance:4, cache: 1];
+    SWapproximation_options =
+        Switch(
+            buttonState,
+            buttonUpApprox,
+            buttonDownApprox) [instance: 5, cache: 1];
+    SWdensity_options =
+        Switch(
+            buttonState,
+            buttonUpDensity,
+            buttonDownDensity) [instance: 6, cache: 1];
+    HWapproximation_options =
+        Format(
+            "%s,%s",
+            buttonDownApprox,
+            buttonUpApprox) [instance: 1, cache: 1];
+    HWdensity_options =
+        Format(
+            "%d,%d",
+            buttonDownDensity,
+            buttonUpDensity) [instance: 2, cache: 1];
+    switchRenderMode = Compute(
+	     "$0+1",
+	     renderMode) [instance: 3, cache: 1];
+    approximation_options = Switch(
+	     switchRenderMode,
+            SWapproximation_options,
+	     HWapproximation_options) [instance: 7, cache: 1];
+    density_options = Switch(
+	     switchRenderMode,
+            SWdensity_options,
+            HWdensity_options) [instance: 8, cache: 1];
+    renderModeString = Switch(
+            switchRenderMode,
+            "software",
+            "hardware")[instance: 9, cache: 1];
+    object_tag = Inquire(
+            object,
+            "object tag")[instance: 3, cache: 1];
+    annoted_object =
+        Options(
+            object,
+            "send boxes",
+            0,
+            "cache",
+            1,
+            "object tag",
+            object_tag,
+            "ddcamera",
+            whichCamera,
+            "rendering approximation",
+            approximation_options,
+            "render every",
+            density_options,
+            "button state",
+            buttonState,
+            "rendering mode",
+            renderModeString) [instance: 1, cache: 1];
+    RECresNull =
+        Inquire(
+            RECresolution,
+            "is null + 1") [instance: 4, cache: 1];
+    ImageResolution =
+        Inquire(
+            camera,
+            "camera resolution") [instance: 5, cache: 1];
+    RECresolution =
+        Switch(
+            RECresNull,
+            RECresolution,
+            ImageResolution) [instance: 10, cache: 1];
+    RECaspectNull =
+        Inquire(
+            RECaspect,
+            "is null + 1") [instance: 6, cache: 1];
+    ImageAspect =
+        Inquire(
+            camera,
+            "camera aspect") [instance: 7, cache: 1];
+    RECaspect =
+        Switch(
+            RECaspectNull,
+            RECaspect,
+            ImageAspect) [instance: 11, cache: 1];
+    switchRECenable = Compute(
+          "$0 == 0 ? 1 : (($2 == $3) && ($4 == $5)) ? ($1 == 1 ? 2 : 3) : 4",
+            RECenable,
+            switchRenderMode,
+            RECresolution,
+            ImageResolution,
+            RECaspect,
+	     ImageAspect) [instance: 4, cache: 1];
+    NoRECobject, RECNoRerenderObject, RECNoRerHW, RECRerenderObject = Route(switchRECenable, annoted_object);
+    Display(
+        NoRECobject,
+        camera,
+        where,
+        throttle) [instance: 1, cache: 1];
+    image =
+        Render(
+            RECNoRerenderObject,
+            camera) [instance: 1, cache: 1];
+    Display(
+        image,
+        NULL,
+        where,
+        throttle) [instance: 2, cache: 1];
+    WriteImage(
+        image,
+        RECfile,
+        RECformat) [instance: 1, cache: 1];
+    rec_where = Display(
+        RECNoRerHW,
+        camera,
+        where,
+        throttle) [instance: 1, cache: 0];
+    rec_image = ReadImageWindow(
+        rec_where) [instance: 1, cache: 1];
+    WriteImage(
+        rec_image,
+        RECfile,
+        RECformat) [instance: 1, cache: 1];
+    RECupdateCamera =
+	UpdateCamera(
+	    camera,
+	    resolution=RECresolution,
+	    aspect=RECaspect) [instance: 2, cache: 1];
+    Display(
+        RECRerenderObject,
+        camera,
+        where,
+        throttle) [instance: 1, cache: 1];
+    RECRerenderObject =
+	ScaleScreen(
+	    RECRerenderObject,
+	    NULL,
+	    RECresolution,
+	    camera) [instance: 1, cache: 1];
+    image =
+        Render(
+            RECRerenderObject,
+            RECupdateCamera) [instance: 2, cache: 1];
+    WriteImage(
+        image,
+        RECfile,
+        RECformat) [instance: 2, cache: 1];
+}
+main_Image_1_in_1 = "Image_1";
+main_Image_1_in_3 = "X24,,";
+main_Image_1_in_4 = 1;
+main_Image_1_in_5 = [23.814 23.814 -263.48];
+main_Image_1_in_6 = [23.814 23.814 1433.45];
+main_Image_1_in_7 = 909.384;
+main_Image_1_in_8 = 884;
+main_Image_1_in_9 = 0.63;
+main_Image_1_in_10 = [0 1 0];
+main_Image_1_in_11 = NULL;
+main_Image_1_in_12 = 0;
+main_Image_1_in_13 = NULL;
+main_Image_1_in_14 = 1;
+main_Image_1_in_15 = NULL;
+main_Image_1_in_16 = NULL;
+main_Image_1_in_17 = NULL;
+main_Image_1_in_18 = NULL;
+main_Image_1_in_19 = 0;
+main_Image_1_in_20 = NULL;
+main_Image_1_in_21 = NULL;
+main_Image_1_in_22 = "white";
+main_Image_1_in_23 = NULL;
+main_Image_1_in_25 = "/home/xsy/work-ustc/nucleic_base_data/GC-proton-transfer/2dmtd/2d/gc-2d-mtd.tiff";
+main_Image_1_in_26 = "tiff";
+main_Image_1_in_27 = NULL;
+main_Image_1_in_28 = NULL;
+main_Image_1_in_29 = 1;
+main_Image_1_in_30 = {"differ of N3-H1-N1", "differ of O6-H4-N4", ""};
+main_Image_1_in_31 = { 15 15 5 };
+main_Image_1_in_32 = NULL;
+main_Image_1_in_33 = 0;
+main_Image_1_in_34 = 0;
+main_Image_1_in_35 = NULL;
+main_Image_1_in_36 = 0;
+main_Image_1_in_37 = {"clear", "black", "black", "black"};
+main_Image_1_in_38 = {"background", "grid", "ticks", "labels"};
+main_Image_1_in_39 = 0.7;
+main_Image_1_in_40 = "roman_tser";
+main_Image_1_in_41 = "none";
+main_Image_1_in_42 = NULL;
+main_Image_1_in_43 = NULL;
+main_Image_1_in_44 = NULL;
+main_Image_1_in_45 = NULL;
+main_Image_1_in_46 = NULL;
+main_Image_1_in_47 = NULL;
+main_Image_1_in_48 = NULL;
+main_Image_1_in_49 = NULL;
+Executive("product version 4 4 4");
+$sync
+main();
